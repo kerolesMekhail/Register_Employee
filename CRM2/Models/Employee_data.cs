@@ -7,7 +7,7 @@ using System.Web;
 
 namespace CRM2.Models
 {
-    public class Employee_data
+    public partial class Employee_data
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
@@ -15,7 +15,7 @@ namespace CRM2.Models
         public int Insurance_number{ get; set; }
 
         public string Job_Title { get; set; }
-
+        public string Image { get; set; }
         [Required(ErrorMessage = "Please Enter Full Name "), MaxLength(100)]
         public string Full_Name { get; set; }
 

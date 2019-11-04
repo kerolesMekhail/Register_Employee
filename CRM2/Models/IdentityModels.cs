@@ -22,7 +22,7 @@ namespace CRM2.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base(@"Data Source=.;Initial Catalog=Employee_Registeration;Integrated Security=true")
+            : base(@"Data Source=.;Initial Catalog=Employee_Registeration2;Integrated Security=true")
         {
         }
         public virtual DbSet<Employee_data> employee_data { get; set; }

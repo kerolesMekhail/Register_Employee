@@ -207,13 +207,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201910241151391_eem.cs" />
-    <Compile Include="Migrations\201910241151391_eem.Designer.cs">
-      <DependentUpon>201910241151391_eem.cs</DependentUpon>
+    <Compile Include="Migrations\201910261425522_emp.cs" />
+    <Compile Include="Migrations\201910261425522_emp.Designer.cs">
+      <DependentUpon>201910261425522_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201910271130315_emp24.cs" />
+    <Compile Include="Migrations\201910271130315_emp24.Designer.cs">
+      <DependentUpon>201910271130315_emp24.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Employee_data.cs" />
+    <Compile Include="Models\Employee_DataPartial.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Personal_Status.cs" />
@@ -222,8 +227,12 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\background.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\cfdb17e29a2fde1c1e856dc1abd2725c78e00da4-270616100926.jpg" />
+    <Content Include="Content\Images\cr.jpg" />
+    <Content Include="Content\Images\download.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -318,8 +327,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201910241151391_eem.resx">
-      <DependentUpon>201910241151391_eem.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201910261425522_emp.resx">
+      <DependentUpon>201910261425522_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201910271130315_emp24.resx">
+      <DependentUpon>201910271130315_emp24.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

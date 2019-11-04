@@ -4,183 +4,39 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
-
-<div>
-    <h4>Employee_data</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Insurance_number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Insurance_number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Job_Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Job_Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Full_Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Full_Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gender)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gender)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Street)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Street)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Date_of_birth)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Date_of_birth)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Post_number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Post_number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Landline_Number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Landline_Number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone_Mobile)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Phone_Mobile)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Mobile)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Mobile)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nationality)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Country_proof_of_personality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Country_proof_of_personality)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Personal_identification_number)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Personal_identification_number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Type_of_proof_of_personality)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Type_of_proof_of_personality)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Work_Permit)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Work_Permit)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Social_Security)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Social_Security)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Bank)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Bank)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Valid_to_date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Valid_to_date)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Identification_Card)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Identification_Card)
-        </dd>
-
-    </dl>
+<h2 style="color:black;font-size:30px;font-weight:bold;text-align:center;font-family:Britannic;">Details</h2>
+<div class="row">
+    <div class="col-lg-6">
+        <div style="height:400px;width:100%;border-radius:20px;border:1px solid white;">
+            <img src="@Url.Content(Model.Image)" style="height:400px;width:100%;border-radius:20px;border:1px solid white;" />
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <br /><br /><br />
+        <span>@Html.DisplayNameFor(model => model.Full_Name)</span> | @Html.DisplayFor(model => model.Full_Name)<br />
+        <span>@Html.DisplayNameFor(model => model.Address)</span> | @Html.DisplayFor(model => model.Address)<br />
+        <span>@Html.DisplayNameFor(model => model.Insurance_number)</span> | @Html.DisplayFor(model => model.Insurance_number)<br />
+        <span>@Html.DisplayNameFor(model => model.Gender)</span> | @Html.DisplayFor(model => model.Gender)<br />
+        <span>@Html.DisplayNameFor(model => model.Job_Title)</span> | @Html.DisplayFor(model => model.Job_Title)<br />
+        <span>@Html.DisplayNameFor(model => model.Social_Security)</span> | @Html.DisplayFor(model => model.Social_Security)<br />
+        <span>@Html.DisplayNameFor(model => model.personal_status)</span> | @Html.DisplayFor(model => model.personal_status)<br />
+        <span>@Html.DisplayNameFor(model => model.Mobile)</span> | @Html.DisplayFor(model => model.Mobile)<br />
+        <span>@Html.DisplayNameFor(model => model.Phone_Mobile)</span> | @Html.DisplayFor(model => model.Phone_Mobile)<br />
+        <span>@Html.DisplayNameFor(model => model.Type_of_proof_of_personality)</span> | @Html.DisplayFor(model => model.Type_of_proof_of_personality)<br />
+        <span>@Html.DisplayNameFor(model => model.Valid_to_date)</span> | @Html.DisplayFor(model => model.Valid_to_date)<br />
+        <span>@Html.DisplayNameFor(model => model.Work_Permit)</span> | @Html.DisplayFor(model => model.Work_Permit)<br />
+        <span>@Html.DisplayNameFor(model => model.Bank)</span> | @Html.DisplayFor(model => model.Bank)<br />
+        <span>@Html.DisplayNameFor(model => model.Nationality)</span> | @Html.DisplayFor(model => model.Nationality)<br />
+        <span>@Html.DisplayNameFor(model => model.Email)</span> | @Html.DisplayFor(model => model.Email)<br />
+        <span>@Html.DisplayNameFor(model => model.Post_number)</span> | @Html.DisplayFor(model => model.Post_number)<br />
+        <span>@Html.DisplayNameFor(model => model.Country_proof_of_personality)</span> | @Html.DisplayFor(model => model.Country_proof_of_personality)<br />
+        <span>@Html.DisplayNameFor(model => model.Landline_Number)</span> | @Html.DisplayFor(model => model.Landline_Number)<br />
+        <span>@Html.DisplayNameFor(model => model.Identification_Card)</span> | @Html.DisplayFor(model => model.Identification_Card)<br />
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+
+

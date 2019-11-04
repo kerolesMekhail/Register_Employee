@@ -3,152 +3,25 @@
 @{
     ViewBag.Title = "Index";
 }
-
 <h2 style="color:black;font-size:30px;font-weight:bold;text-align:center;font-family:Britannic;">Employee Information</h2>
 
 <p>
     @Html.ActionLink("Create New Employee", "Create")
 </p>
-<table class="table ">
-    <tr style="color:black;background-color:#0275d8;text-align:center">
-        <th>
-            @Html.DisplayNameFor(model => model.Insurance_number)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Job_Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Full_Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Street)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date_of_birth)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Post_number)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Landline_Number)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Phone_Mobile)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Mobile)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Nationality)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Country_proof_of_personality)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Personal_identification_number)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Type_of_proof_of_personality)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Work_Permit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Social_Security)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Bank)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Valid_to_date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Identification_Card)
-        </th>
-        <th></th>
-    </tr>
+@foreach (var item in Model)
+{
+    <div class="col-lg-3" style="height:250px;width:280px;">
+        <img src="@Url.Content(item.Image)" style="height:200px;width:200px;border-radius:10px;" />
+        <br />
+        <span>Name &nbsp;&nbsp; @Html.DisplayFor(modelItem => item.Full_Name)</span>
+        <br />
+        <span>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </span>
+    </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Insurance_number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Job_Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Full_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Street)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_of_birth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Post_number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Landline_Number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone_Mobile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Mobile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nationality)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Country_proof_of_personality)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Personal_identification_number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type_of_proof_of_personality)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Work_Permit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Social_Security)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Bank)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valid_to_date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Identification_Card)
-            </td>
-            <td>
-                <button class="btn btn-danger" style="background-color:#134787"> @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @style = "color:white;" }) </button>
-                <button class="btn btn-danger" style="background-color:#134787">@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @style = "color:white;" }) </button>
-                <button class="btn btn-danger" style="background-color:#134787">  @Html.ActionLink("Delete", "Delete", new { id = item.ID }, new { @style = "color:white;" })</button>
-            </td>
-        </tr>
-    }
 
-</table>
+}
+

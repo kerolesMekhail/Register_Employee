@@ -17,7 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <img src="~/Content/Images/cr.jpg" style="height:50px; width:100px;" />
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -32,12 +32,15 @@
             </div>
         </div>
     </div>
+    <div>
+        <img src="~/Content/background.jpg" style="width:100% ;height:400px;"/>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
 
     </div>
-    <footer style="background-color:#134787;width:2030px; height:50px">
+    <footer style="background-color:#134787;width:100%; height:50px">
         <p style="text-align:center;padding-top:18px;font-weight:bold;color:white">&copy; All Rights Are Saved 2019</p>
     </footer>
     @Scripts.Render("~/bundles/jquery")
